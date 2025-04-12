@@ -1,0 +1,58 @@
+/* Styles supplémentaires spécifiques à l'application */
+
+/* Animation pour les blocs Minecraft */
+@keyframes blockFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: blockFloat 3s ease-in-out infinite;
+}
+
+/* Styles pour les onglets */
+.tab-container {
+  @apply flex border-b border-gray-300 dark:border-gray-700;
+}
+
+.tab {
+  @apply px-4 py-2 font-medium cursor-pointer;
+}
+
+.tab-active {
+  @apply text-blue-600 border-b-2 border-blue-600 dark:text-blue-400 dark:border-blue-400;
+}
+
+.tab:not(.tab-active) {
+  @apply text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200;
+}
+
+/* Styles pour la grille 3D de l'éditeur de blueprint */
+.blueprint-grid {
+  @apply bg-gray-800 rounded-lg overflow-hidden;
+  height: 600px;
+}
+
+/* Styles pour la barre d'outils de l'éditeur */
+.editor-toolbar {
+  @apply flex items-center space-x-2 p-2 bg-gray-200 dark:bg-gray-800 rounded-t-lg;
+}
+
+.toolbar-button {
+  @apply p-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700;
+}
+
+/* Styles pour les cartes de versions Minecraft */
+.version-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow;
+}
+
+/* Styles pour les cartes de blueprints */
+.blueprint-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-4 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow;
+}
+
+.blueprint-thumbnail {
+  @apply w-full h-40 object-cover rounded bg-gray-300 dark:bg-gray-700;
+}

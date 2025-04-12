@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Classes personnalisées pour Minecraft */
+.minecraft-font {
+  font-family: 'MinecraftRegular', 'Roboto', sans-serif;
+}
+
+/* Styles pour les blocs Minecraft dans l'éditeur */
+.minecraft-block {
+  @apply border border-gray-700 rounded-sm shadow-md;
+  image-rendering: pixelated;
+}
+
+/* Classes pour les tableaux de données */
+.data-table {
+  @apply w-full border-collapse;
+}
+
+.data-table th {
+  @apply bg-gray-200 dark:bg-gray-700 p-2 text-left;
+}
+
+.data-table td {
+  @apply border-t border-gray-300 dark:border-gray-600 p-2;
+}
+
+.data-table tr:hover {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+/* Classes pour les boutons stylisés comme Minecraft */
+.minecraft-button {
+  @apply py-2 px-4 rounded font-bold transform transition-transform duration-100 border-b-4 active:border-b-0 active:translate-y-1;
+}
+
+.minecraft-button-primary {
+  @apply minecraft-button bg-green-500 hover:bg-green-600 border-green-700 text-white;
+}
+
+.minecraft-button-secondary {
+  @apply minecraft-button bg-gray-300 hover:bg-gray-400 border-gray-500 text-gray-800;
+}
+
+.minecraft-button-danger {
+  @apply minecraft-button bg-red-500 hover:bg-red-600 border-red-700 text-white;
+}
